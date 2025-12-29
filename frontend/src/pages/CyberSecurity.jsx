@@ -59,7 +59,15 @@ export default function CyberSecurity() {
             <button
               className="forensic-btn"
               onClick={() =>
-                navigate("/forensics", { state: payload })   // ✅ FIX
+                navigate("/forensics", {
+                  state: {
+                    command: payload.command || "N/A",
+                    decision: {
+                      action: payload.decision?.action || "N/A",
+                      risk: payload.decision?.risk || "N/A"
+                    }
+                  }
+                })
               }
             >
               Open Forensic Module
@@ -81,3 +89,4 @@ export default function CyberSecurity() {
     </div>
   );
 }
+

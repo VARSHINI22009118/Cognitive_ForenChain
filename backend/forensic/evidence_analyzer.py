@@ -1,4 +1,13 @@
-def analyze_evidence(evidence):
-    # Placeholder for malware / log analysis
-    evidence["analysis"] = "No known threat detected"
-    return evidence
+import time
+
+class EvidenceAnalyzer:
+    def reconstruct_timeline(self, events: list) -> list:
+        timeline = []
+
+        for event in events:
+            timeline.append({
+                "time": time.strftime("%H:%M:%S"),
+                "event": event
+            })
+
+        return timeline

@@ -113,3 +113,111 @@
 2025-12-29 13:40:12,370 [BCI] 127.0.0.1 - - [29/Dec/2025 13:40:12] "POST /api/bci-command HTTP/1.1" 200 -
 2025-12-29 13:40:12,407 [BCI] 127.0.0.1 - - [29/Dec/2025 13:40:12] "OPTIONS /api/csp/command HTTP/1.1" 200 -
 2025-12-29 13:40:12,692 [BCI] 127.0.0.1 - - [29/Dec/2025 13:40:12] "POST /api/csp/command HTTP/1.1" 200 -
+2025-12-29 14:52:42,950 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\forensic\\evidence_collector.py', reloading
+2025-12-29 14:52:43,039 [BCI]  * Restarting with stat
+2025-12-29 14:52:43,451 [BCI]  * Debugger is active!
+2025-12-29 14:52:43,453 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 14:53:00,576 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\forensic\\hash_generator.py', reloading
+2025-12-29 14:53:00,617 [BCI]  * Restarting with stat
+2025-12-29 14:53:01,015 [BCI]  * Debugger is active!
+2025-12-29 14:53:01,017 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 14:53:13,100 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\forensic\\evidence_manager.py', reloading
+2025-12-29 14:53:13,150 [BCI]  * Restarting with stat
+2025-12-29 15:04:02,217 [BCI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-29 15:04:02,217 [BCI] [33mPress CTRL+C to quit[0m
+2025-12-29 15:04:02,219 [BCI]  * Restarting with stat
+2025-12-29 15:04:02,520 [BCI]  * Debugger is active!
+2025-12-29 15:04:02,521 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 15:04:12,708 [BCI] 127.0.0.1 - - [29/Dec/2025 15:04:12] "OPTIONS /api/login HTTP/1.1" 200 -
+2025-12-29 15:04:13,189 [BCI] 127.0.0.1 - - [29/Dec/2025 15:04:13] "POST /api/login HTTP/1.1" 200 -
+2025-12-29 15:04:26,467 [BCI] 127.0.0.1 - - [29/Dec/2025 15:04:26] "OPTIONS /api/bci-command HTTP/1.1" 200 -
+2025-12-29 15:04:26,774 [BCI] Command: MARK_ANOMALY | Confidence: 0.58 | Timestamp: 2025-12-29T09:34:26.462Z
+2025-12-29 15:04:26,775 [BCI] 127.0.0.1 - - [29/Dec/2025 15:04:26] "POST /api/bci-command HTTP/1.1" 200 -
+2025-12-29 15:04:27,036 [BCI] 127.0.0.1 - - [29/Dec/2025 15:04:27] "OPTIONS /api/csp/command HTTP/1.1" 200 -
+2025-12-29 15:04:27,085 [BCI] 127.0.0.1 - - [29/Dec/2025 15:04:27] "POST /api/csp/command HTTP/1.1" 200 -
+2025-12-29 15:41:58,486 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\routes.py', reloading
+2025-12-29 15:41:58,537 [BCI]  * Restarting with stat
+2025-12-29 15:41:58,858 [BCI]  * Debugger is active!
+2025-12-29 15:41:58,861 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 15:42:21,015 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\forensic\\evidence_manager.py', reloading
+2025-12-29 15:42:21,060 [BCI]  * Restarting with stat
+2025-12-29 15:42:21,445 [BCI]  * Debugger is active!
+2025-12-29 15:42:21,446 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 15:43:02,045 [BCI] 127.0.0.1 - - [29/Dec/2025 15:43:02] "[33mGET /main.961e65d4ee7c6382bd96.hot-update.json HTTP/1.1[0m" 404 -
+2025-12-29 15:53:06,095 [BCI] 127.0.0.1 - - [29/Dec/2025 15:53:06] "OPTIONS /api/login HTTP/1.1" 200 -
+2025-12-29 15:53:06,587 [BCI] 127.0.0.1 - - [29/Dec/2025 15:53:06] "POST /api/login HTTP/1.1" 200 -
+2025-12-29 15:53:17,314 [BCI] 127.0.0.1 - - [29/Dec/2025 15:53:17] "OPTIONS /api/bci-command HTTP/1.1" 200 -
+2025-12-29 15:53:17,623 [BCI] Command: TAG_EVIDENCE | Confidence: 0.6 | Timestamp: 2025-12-29T10:23:17.309Z
+2025-12-29 15:53:17,624 [BCI] 127.0.0.1 - - [29/Dec/2025 15:53:17] "POST /api/bci-command HTTP/1.1" 200 -
+2025-12-29 15:53:17,885 [BCI] 127.0.0.1 - - [29/Dec/2025 15:53:17] "OPTIONS /api/csp/command HTTP/1.1" 200 -
+2025-12-29 15:53:17,934 [BCI] 127.0.0.1 - - [29/Dec/2025 15:53:17] "POST /api/csp/command HTTP/1.1" 200 -
+2025-12-29 16:05:07,102 [BCI] 127.0.0.1 - - [29/Dec/2025 16:05:07] "OPTIONS /api/login HTTP/1.1" 200 -
+2025-12-29 16:05:07,577 [BCI] 127.0.0.1 - - [29/Dec/2025 16:05:07] "POST /api/login HTTP/1.1" 200 -
+2025-12-29 16:05:23,295 [BCI] 127.0.0.1 - - [29/Dec/2025 16:05:23] "OPTIONS /api/bci-command HTTP/1.1" 200 -
+2025-12-29 16:05:23,605 [BCI] Command: COLLECT_EVIDENCE | Confidence: 0.59 | Timestamp: 2025-12-29T10:35:23.292Z
+2025-12-29 16:05:23,606 [BCI] 127.0.0.1 - - [29/Dec/2025 16:05:23] "POST /api/bci-command HTTP/1.1" 200 -
+2025-12-29 16:05:23,871 [BCI] 127.0.0.1 - - [29/Dec/2025 16:05:23] "OPTIONS /api/csp/command HTTP/1.1" 200 -
+2025-12-29 16:05:23,920 [BCI] 127.0.0.1 - - [29/Dec/2025 16:05:23] "POST /api/csp/command HTTP/1.1" 200 -
+2025-12-29 16:37:24,254 [BCI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-29 16:37:24,254 [BCI] [33mPress CTRL+C to quit[0m
+2025-12-29 16:37:24,258 [BCI]  * Restarting with stat
+2025-12-29 16:37:25,374 [BCI]  * Debugger is active!
+2025-12-29 16:37:25,377 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 16:37:42,661 [BCI] 127.0.0.1 - - [29/Dec/2025 16:37:42] "[33mGET /main.1bddfaf17bde129886e3.hot-update.json HTTP/1.1[0m" 404 -
+2025-12-29 16:38:03,278 [BCI] 127.0.0.1 - - [29/Dec/2025 16:38:03] "OPTIONS /api/login HTTP/1.1" 200 -
+2025-12-29 16:38:03,848 [BCI] 127.0.0.1 - - [29/Dec/2025 16:38:03] "POST /api/login HTTP/1.1" 200 -
+2025-12-29 16:38:44,552 [BCI] 127.0.0.1 - - [29/Dec/2025 16:38:44] "OPTIONS /api/register HTTP/1.1" 200 -
+2025-12-29 16:38:45,164 [BCI] 127.0.0.1 - - [29/Dec/2025 16:38:45] "[35m[1mPOST /api/register HTTP/1.1[0m" 201 -
+2025-12-29 16:39:53,296 [BCI] 127.0.0.1 - - [29/Dec/2025 16:39:53] "OPTIONS /api/login HTTP/1.1" 200 -
+2025-12-29 16:39:53,842 [BCI] 127.0.0.1 - - [29/Dec/2025 16:39:53] "POST /api/login HTTP/1.1" 200 -
+2025-12-29 16:40:07,714 [BCI] 127.0.0.1 - - [29/Dec/2025 16:40:07] "OPTIONS /api/bci-command HTTP/1.1" 200 -
+2025-12-29 16:40:08,027 [BCI] Command: TAG_EVIDENCE | Confidence: 0.63 | Timestamp: 2025-12-29T11:10:07.711Z
+2025-12-29 16:40:08,027 [BCI] 127.0.0.1 - - [29/Dec/2025 16:40:08] "POST /api/bci-command HTTP/1.1" 200 -
+2025-12-29 16:40:08,294 [BCI] 127.0.0.1 - - [29/Dec/2025 16:40:08] "OPTIONS /api/csp/command HTTP/1.1" 200 -
+2025-12-29 16:40:08,341 [BCI] 127.0.0.1 - - [29/Dec/2025 16:40:08] "POST /api/csp/command HTTP/1.1" 200 -
+2025-12-29 19:03:24,006 [BCI] 127.0.0.1 - - [29/Dec/2025 19:03:24] "OPTIONS /api/login HTTP/1.1" 200 -
+2025-12-29 19:03:24,661 [BCI] 127.0.0.1 - - [29/Dec/2025 19:03:24] "POST /api/login HTTP/1.1" 200 -
+2025-12-29 19:03:36,653 [BCI] 127.0.0.1 - - [29/Dec/2025 19:03:36] "OPTIONS /api/bci-command HTTP/1.1" 200 -
+2025-12-29 19:03:36,966 [BCI] Command: COLLECT_EVIDENCE | Confidence: 0.56 | Timestamp: 2025-12-29T13:33:36.642Z
+2025-12-29 19:03:36,967 [BCI] 127.0.0.1 - - [29/Dec/2025 19:03:36] "POST /api/bci-command HTTP/1.1" 200 -
+2025-12-29 19:03:37,230 [BCI] 127.0.0.1 - - [29/Dec/2025 19:03:37] "OPTIONS /api/csp/command HTTP/1.1" 200 -
+2025-12-29 19:03:37,281 [BCI] 127.0.0.1 - - [29/Dec/2025 19:03:37] "POST /api/csp/command HTTP/1.1" 200 -
+2025-12-29 19:04:37,550 [BCI] 127.0.0.1 - - [29/Dec/2025 19:04:37] "[33mGET /main.c5f58abcc75793710ed9.hot-update.json HTTP/1.1[0m" 404 -
+2025-12-29 19:04:39,210 [BCI] 127.0.0.1 - - [29/Dec/2025 19:04:39] "[33mGET /main.c5f58abcc75793710ed9.hot-update.json HTTP/1.1[0m" 404 -
+2025-12-29 19:04:41,205 [BCI] 127.0.0.1 - - [29/Dec/2025 19:04:41] "[33mGET /main.55e38c5fcaf9c55448b0.hot-update.json HTTP/1.1[0m" 404 -
+2025-12-29 20:37:38,218 [BCI] 127.0.0.1 - - [29/Dec/2025 20:37:38] "OPTIONS /api/login HTTP/1.1" 200 -
+2025-12-29 20:37:38,631 [BCI] 127.0.0.1 - - [29/Dec/2025 20:37:38] "POST /api/login HTTP/1.1" 200 -
+2025-12-29 21:22:11,126 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\blockchain\\block.py', reloading
+2025-12-29 21:22:11,233 [BCI]  * Restarting with stat
+2025-12-29 21:22:11,706 [BCI]  * Debugger is active!
+2025-12-29 21:22:11,707 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 21:22:20,793 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\blockchain\\blockchain.py', reloading
+2025-12-29 21:22:20,847 [BCI]  * Restarting with stat
+2025-12-29 21:22:21,264 [BCI]  * Debugger is active!
+2025-12-29 21:22:21,265 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 21:22:51,463 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\blockchain\\smart_contract.py', reloading
+2025-12-29 21:22:51,515 [BCI]  * Restarting with stat
+2025-12-29 21:22:51,934 [BCI]  * Debugger is active!
+2025-12-29 21:22:51,938 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 21:23:00,019 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\blockchain\\contract_interface.py', reloading
+2025-12-29 21:23:00,094 [BCI]  * Restarting with stat
+2025-12-29 21:23:00,457 [BCI]  * Debugger is active!
+2025-12-29 21:23:00,459 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 21:23:10,547 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\blockchain\\transaction_logger.py', reloading
+2025-12-29 21:23:10,595 [BCI]  * Restarting with stat
+2025-12-29 21:23:10,994 [BCI]  * Debugger is active!
+2025-12-29 21:23:10,995 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 21:23:21,075 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\forensic\\evidence_manager.py', reloading
+2025-12-29 21:23:21,140 [BCI]  * Restarting with stat
+2025-12-29 21:23:21,637 [BCI]  * Debugger is active!
+2025-12-29 21:23:21,638 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 21:23:41,780 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\forensic\\report_generator.py', reloading
+2025-12-29 21:23:41,846 [BCI]  * Restarting with stat
+2025-12-29 21:23:42,328 [BCI]  * Debugger is active!
+2025-12-29 21:23:42,329 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 21:23:54,415 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\database\\models.py', reloading
+2025-12-29 21:23:54,473 [BCI]  * Restarting with stat
+2025-12-29 21:23:54,877 [BCI]  * Debugger is active!
+2025-12-29 21:23:54,878 [BCI]  * Debugger PIN: 735-784-309

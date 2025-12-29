@@ -1,22 +1,16 @@
 import os
-import shutil
-from forensic.hash_generator import generate_hash
-from config import EVIDENCE_DIR
+import time
 
-def collect_evidence(file_path):
-    if not os.path.exists(EVIDENCE_DIR):
-        os.makedirs(EVIDENCE_DIR)
+class EvidenceCollector:
+    def acquire(self, file_path: str) -> dict:
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f"Evidence not found: {file_path}")
 
-    file_name = os.path.basename(file_path)
-    stored_path = os.path.join(EVIDENCE_DIR, file_name)
+        stats = os.stat(file_path)
 
-    shutil.copy(file_path, stored_path)
-
-    evidence = {
-        "file_name": file_name,
-        "file_path": stored_path,
-        "hash": generate_hash(stored_path),
-        "status": "COLLECTED"
-    }
-
-    return evidence
+        return {
+            "file_path": file_path,
+            "file_name": os.path.basename(file_path),
+            "size_bytes": stats.st_size,
+            "acquired_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+        }

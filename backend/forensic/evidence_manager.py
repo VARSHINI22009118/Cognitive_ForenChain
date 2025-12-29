@@ -1,11 +1,21 @@
-# backend/forensic/evidence_manager.py
+from blockchain.transaction_logger import log_transaction
 
-from datetime import datetime
 
-def handle_forensic_action(action, metadata):
-    return {
-        "action": action,
-        "status": "completed",
-        "executed_at": datetime.utcnow().isoformat(),
-        "metadata": metadata
-    }
+class EvidenceManager:
+    def apply_tags(self, decision, evidence=None, analyst=None):
+        tags = ["BCI_TRIGGERED"]
+
+        if decision.get("action"):
+            tags.append(decision["action"])
+
+        if decision.get("risk"):
+            tags.append(decision["risk"])
+
+        if evidence and analyst:
+            log_transaction(
+                evidence=evidence,
+                action="TAG_EVIDENCE",
+                analyst=analyst
+            )
+
+        return tags

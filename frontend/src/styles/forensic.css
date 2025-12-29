@@ -1,107 +1,133 @@
 .forensic-root {
-  background: linear-gradient(135deg, #020617, #0f172a);
+  background: #162955;
   min-height: 100vh;
   padding: 30px;
   color: #e5e7eb;
-  font-family: "Segoe UI", sans-serif;
 }
 
+/* ================= HEADER ================= */
 .forensic-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .report-status {
+  background: #065f46;
+  color: #d1fae5;
   padding: 8px 14px;
   border-radius: 6px;
   font-weight: bold;
 }
 
-.report-status.completed {
-  background: #065f46;
-  color: #d1fae5;
-}
-
-.report-status.processing {
-  background: #1e40af;
-  color: #dbeafe;
-}
-
-.forensic-grid {
+/* ================= MAIN GRID ================= */
+.forensic-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 0.85fr 1.3fr 1fr;
+  /*  ↓      ↓       ↓
+      Left  Center  Right
+      Reduced left, balanced right */
   gap: 20px;
+
+  
 }
 
-.forensic-card {
-  background: rgba(2, 6, 23, 0.9);
+
+
+
+/* ================= PANELS ================= */
+.forensic-panel {
+  background: rgba(2, 6, 23, 0.95);
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.forensic-card h3 {
-  margin-bottom: 12px;
+.forensic-panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+
+.forensic-panel h3 {
   color: #38bdf8;
+  margin-bottom: 12px;
 }
 
+/* ================= LOGS ================= */
+.logs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logs li {
+  background: #020617;
+  padding: 8px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+}
+
+/* ================= STATUS ================= */
 .verified {
   color: #22c55e;
   font-weight: bold;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.forensic-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.download-btn {
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.blockchain-btn {
+  background: #334155;
+  color: #e5e7eb;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.download-btn:hover,
+.blockchain-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+.download-btn:active,
+.blockchain-btn:active {
+  transform: scale(0.97);
+}
+
+/* ================= TAGS ================= */
+.tags-panel {
+  margin-top: 20px;
+}
+
+.tag-container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .tag {
   background: #1e293b;
   padding: 6px 10px;
   border-radius: 5px;
-  display: inline-block;
-  margin-bottom: 6px;
-}
-
-.logs ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.logs li {
-  padding: 6px 0;
-  border-bottom: 1px solid #1e293b;
-  font-size: 14px;
-}
-
-.action {
-  display: flex;
-  gap: 10px;
-}
-
-.download-btn,
-.print-btn {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.download-btn {
-  background: #2563eb;
-  color: white;
-}
-
-.print-btn {
-  background: #334155;
-  color: #e5e7eb;
-}
-
-.forensic-idle {
-  background: #020617;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #94a3b8;
 }

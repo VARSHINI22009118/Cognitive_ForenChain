@@ -12,7 +12,8 @@ from csp.validators import validate_csp_payload
 from csp.logger import log_csp_event
 
 # FORENSIC (NEW)
-from forensic.evidence_manager import handle_forensic_action
+from forensic.evidence_manager import EvidenceManager
+
 
 api = Blueprint("api", __name__)
 
@@ -79,7 +80,6 @@ def bci_command():
 @api.route("/api/csp/command", methods=["POST"])
 def csp_command():
     data = request.json
-
     is_valid, message = validate_csp_payload(data)
     if not is_valid:
         return jsonify({"status": "error", "message": message}), 400
@@ -88,10 +88,8 @@ def csp_command():
     confidence = data["confidence"]
     timestamp = data["timestamp"]
 
-    # CSP decision
     decision = decide_action(command, confidence)
 
-    # Log CSP decision
     log_csp_event({
         "command": command,
         "confidence": confidence,
@@ -99,21 +97,8 @@ def csp_command():
         "timestamp": timestamp
     })
 
-    # Trigger forensic if needed
-    forensic_result = None
-    if decision["action"] != "NO_ACTION":
-        forensic_result = handle_forensic_action(
-            action=decision["action"],
-            metadata={
-                "command": command,
-                "confidence": confidence,
-                "risk": decision["risk"],
-                "timestamp": timestamp
-            }
-        )
-
     return jsonify({
         "status": "processed",
-        "decision": decision,
-        "forensic": forensic_result
+        "command": command,
+        "decision": decision
     }), 200

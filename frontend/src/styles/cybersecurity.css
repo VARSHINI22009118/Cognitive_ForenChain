@@ -121,19 +121,43 @@
   gap: 10px; /* spacing between rows */
 }
 
-/* INDIVIDUAL LOG ROW */
+/* FORCE VISIBILITY OF SYSTEM LOGS */
+.logs,
+.log-list,
 .log-row {
-  background: #f8fafc;
-  color: #020617;
-  padding: 10px 14px;
-  border-radius: 6px;
-  font-size: 14px;
-  box-shadow: 0 0 0 1px #e2e8f0;
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* INDIVIDUAL LOG ROW — HARD FIX */
+.log-row {
+  background-color: #ffffff !important;
+  color: #020617 !important;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+
+  /* separation from dark UI */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border-left: 4px solid #38bdf8;
+
+  /* CRITICAL */
+  position: relative;
+  z-index: 10;
+}
+
+/* LOG TEXT — FORCE COLOR */
+.log-row * {
+  color: #020617 !important;
 }
 
 /* IDLE LOG */
 .log-idle {
-  background: transparent;
-  color: #64748b;
-  box-shadow: none;
+  background-color: #f1f5f9 !important;
+  color: #334155 !important;
+  font-style: italic;
+  box-shadow: inset 0 0 0 1px #cbd5f5;
 }
