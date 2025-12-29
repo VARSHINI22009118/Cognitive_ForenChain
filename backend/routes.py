@@ -1,4 +1,5 @@
 # backend/routes.py
+import time
 
 from flask import Blueprint, request, jsonify
 
@@ -101,4 +102,36 @@ def csp_command():
         "status": "processed",
         "command": command,
         "decision": decision
+    }), 200
+
+
+# =========================
+# BLOCKCHAIN LOGS (READ-ONLY)
+# =========================
+from blockchain.contract_interface import blockchain_instance
+
+@api.route("/api/blockchain/logs", methods=["GET"])
+def get_blockchain_logs():
+    chain = blockchain_instance.chain
+
+    logs = []
+    for block in chain[1:]:  # skip genesis
+        data = block.data or {}
+        logs.append({
+            "time": time.strftime("%H:%M:%S", time.localtime(block.timestamp)),
+            "property": data.get("action", "N/A"),
+            "action": "RECORDED",
+            "notes": data.get("evidence_hash", "—"),
+            "highlight": True
+        })
+
+    latest_block = chain[-1]
+
+    return jsonify({
+        "transaction": {
+            "blockNumber": latest_block.index,
+            "blockHash": latest_block.hash,
+            "txHash": latest_block.hash
+        },
+        "logs": logs
     }), 200

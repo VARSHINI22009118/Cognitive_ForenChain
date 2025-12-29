@@ -64,41 +64,49 @@ export default function BCIModule() {
      EMIT COMMAND → CSP
   ======================= */
   const emitCommand = async () => {
-  if (!command) return;
+    if (!command) return;
 
-  const payload = {
-    command,
-    confidence: confidence / 100,
-    timestamp: new Date().toISOString(),
+    const payload = {
+      command,
+      confidence: confidence / 100,
+      timestamp: new Date().toISOString(),
+    };
+
+    setLog((prev) => [
+      `[${new Date().toLocaleTimeString()}] Command sent to CSP`,
+      ...prev.slice(0, 9),
+    ]);
+
+    try {
+      // 🔹 Existing BCI logging (DO NOT REMOVE)
+      await fetch("http://localhost:5000/api/bci-command", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      // 🔹 CSP logging → this writes into csp.log
+      await fetch("http://localhost:5000/api/csp/command", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      // ✅ PASS COMMAND TO NEXT MODULES (THIS FIXES BLOCKCHAIN)
+      navigate("/cyber-security", {
+        state: {
+          ...payload,
+          command, // explicit for clarity
+        },
+      });
+
+      // (Optional later)
+      // navigate("/blockchain", { state: { command } });
+
+    } catch (err) {
+      console.error("BCI → CSP Error:", err);
+    }
   };
-
-  setLog((prev) => [
-    `[${new Date().toLocaleTimeString()}] Command sent to CSP`,
-    ...prev.slice(0, 9),
-  ]);
-
-  try {
-    // 🔹 Existing BCI logging (DO NOT REMOVE)
-    await fetch("http://localhost:5000/api/bci-command", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-
-    // 🔹 NEW: CSP orchestration call
-    await fetch("http://localhost:5000/api/csp/command", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-
-    navigate("/cyber-security", { state: payload });
-
-  } catch (err) {
-    console.error("BCI → CSP Error:", err);
-  }
-};
-
 
   /* =======================
      SVG WAVE PATH
@@ -123,14 +131,10 @@ export default function BCIModule() {
 
           <svg className="eeg-wave" viewBox="0 0 520 160">
             <line x1="20" y1="10" x2="20" y2="130" className="axis" />
-            <text x="2" y="20" className="axis-label">
-              Amplitude
-            </text>
+            <text x="2" y="20" className="axis-label">Amplitude</text>
 
             <line x1="20" y1="130" x2="500" y2="130" className="axis" />
-            <text x="460" y="155" className="axis-label">
-              Time
-            </text>
+            <text x="460" y="155" className="axis-label">Time</text>
 
             <path d={wavePath} className="wave" />
           </svg>
@@ -150,9 +154,7 @@ export default function BCIModule() {
 
           <div className="final-command-box">
             <span className="label">FINAL DECODED COMMAND</span>
-            <div className="command-value">
-              {command || "—"}
-            </div>
+            <div className="command-value">{command || "—"}</div>
           </div>
 
           <div className="confidence-bar">

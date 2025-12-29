@@ -1,133 +1,225 @@
-.forensic-root {
-  background: #162955;
-  min-height: 100vh;
-  padding: 30px;
-  color: #e5e7eb;
+/* ============================= */
+/* FORENSIC.CSS – FULL UPDATED */
+/* ============================= */
+
+/* ADD SPACING BETWEEN SECTIONS */
+.spaced-section {
+  margin-top: 30px;
 }
 
-/* ================= HEADER ================= */
-.forensic-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* ============================= */
+/* EXISTING STYLES */
+/* ============================= */
+
+.forensic-page {
+  padding: 40px;
+  color: #e6edf3;
+  background: radial-gradient(circle at top, #0b1220, #020617);
+  min-height: 100vh;
+}
+
+.forensic-top h1 {
+  font-size: 26px;
   margin-bottom: 30px;
 }
 
-.report-status {
-  background: #065f46;
-  color: #d1fae5;
-  padding: 8px 14px;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-/* ================= MAIN GRID ================= */
-.forensic-layout {
+.forensic-grid {
   display: grid;
-  grid-template-columns: 0.85fr 1.3fr 1fr;
-  /*  ↓      ↓       ↓
-      Left  Center  Right
-      Reduced left, balanced right */
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+.forensic-left,
+.forensic-right {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
-
-  
 }
 
-
-
-
-/* ================= PANELS ================= */
-.forensic-panel {
-  background: rgba(2, 6, 23, 0.95);
-  border-radius: 10px;
+.forensic-card {
+  background: #0f172a;
+  border-radius: 14px;
   padding: 20px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: inset 0 0 0 1px #1e293b;
 }
 
-.forensic-panel:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 30px rgba(0,0,0,0.8);
+.forensic-card.wide {
+  height: 100%;
 }
 
-.forensic-panel h3 {
-  color: #38bdf8;
-  margin-bottom: 12px;
-}
-
-/* ================= LOGS ================= */
-.logs ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.logs li {
-  background: #020617;
-  padding: 8px;
-  margin-bottom: 6px;
-  border-radius: 6px;
-}
-
-/* ================= STATUS ================= */
-.verified {
-  color: #22c55e;
+.file-name {
+  font-size: 18px;
   font-weight: bold;
 }
 
-/* ================= ACTION BUTTONS ================= */
+.hash {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.alert.danger {
+  margin-top: 15px;
+  padding: 12px;
+  background: #2a0e0e;
+  border-left: 4px solid #ef4444;
+  color: #f87171;
+  font-weight: bold;
+}
+
+.result {
+  margin-top: 10px;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.circle.normal {
+  background: #22c55e;
+}
+
+.analysis-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.analysis-table th,
+.analysis-table td {
+  padding: 10px;
+  border-bottom: 1px solid #1e293b;
+  text-align: left;
+}
+
+.analysis-text {
+  margin-top: 15px;
+  color: #cbd5f5;
+}
+
 .forensic-actions {
   display: flex;
-  gap: 12px;
+  gap: 15px;
   margin-top: 20px;
 }
 
-.download-btn {
-  background: #2563eb;
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 6px;
+.forensic-actions button {
+  padding: 10px 16px;
+  background: #38bdf8;
   border: none;
-  font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.blockchain-btn {
-  background: #334155;
-  color: #e5e7eb;
-  padding: 10px 14px;
-  border-radius: 6px;
-  border: none;
   font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.download-btn:hover,
-.blockchain-btn:hover {
-  transform: scale(1.05);
-  opacity: 0.95;
+.timeline ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
 }
 
-.download-btn:active,
-.blockchain-btn:active {
-  transform: scale(0.97);
+.timeline li {
+  background: #ffffff;
+  color: #020617;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
-/* ================= TAGS ================= */
-.tags-panel {
-  margin-top: 20px;
-}
-
-.tag-container {
+.tags .tag-list {
   display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .tag {
-  background: #1e293b;
-  padding: 6px 10px;
-  border-radius: 5px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  font-size: 13px;
+}
+
+.forensic-footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* ============================= */
+/* HOVER INTERACTIONS – GLOBAL */
+/* ============================= */
+
+/* Forensic Cards Hover */
+.forensic-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.forensic-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 25px rgba(56, 189, 248, 0.15),
+    inset 0 0 0 1px #38bdf8;
+}
+
+/* Buttons Hover */
+.forensic-actions button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.forensic-actions button:hover {
+  transform: translateY(-2px);
+  background: #0ea5e9;
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Timeline Hover */
+.timeline li {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Tags Hover */
+.tag {
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  cursor: default;
+}
+
+.tag:hover {
+  background: #38bdf8;
+  color: #020617;
+  transform: translateY(-2px);
+}
+
+/* Analysis Table Row Hover */
+.analysis-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.analysis-table tbody tr:hover {
+  background: rgba(56, 189, 248, 0.08);
+}
+
+/* Evidence Alert Hover */
+.alert.danger {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.alert.danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.35);
 }

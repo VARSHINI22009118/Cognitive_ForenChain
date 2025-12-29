@@ -1,7 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
-import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
 import "../styles/forensic.css";
 
 export default function DigitalForensics() {
@@ -9,120 +7,146 @@ export default function DigitalForensics() {
   const navigate = useNavigate();
   const pdfRef = useRef();
 
-  const [status, setStatus] = useState("IDLE");
+  const decision = state?.decision;
+
   const [timeline, setTimeline] = useState([]);
   const [hash, setHash] = useState("");
-  const [tags, setTags] = useState([]);
   const [caseId, setCaseId] = useState("");
-  const [reportGenerated, setReportGenerated] = useState(false); // ✅ NEW
-
-  const decision = state?.decision || null;
+  const [tags, setTags] = useState([]);
+  const [reportGenerated, setReportGenerated] = useState(false);
 
   useEffect(() => {
     if (!decision) return;
-
-    setStatus("PROCESSING");
 
     const now = () => new Date().toLocaleTimeString();
 
     setTimeline([
       `[${now()}] Evidence acquired`,
-      `[${now()}] Cryptographic hash generated`,
-      `[${now()}] Evidence tagged via CSP`,
+      `[${now()}] Hash generated (SHA-256)`,
+      `[${now()}] Automated malware scan completed`,
       `[${now()}] Timeline reconstructed`,
-      `[${now()}] Cognitive anomaly marked`,
+      `[${now()}] Cognitive anomaly detected`,
       `[${now()}] Forensic report generated`,
     ]);
 
-    setHash("02f3a9c8e8d4c91e5e7d0c4b8f1a7b9e");
-    setTags(["BCI_TRIGGERED", decision.action, decision.risk]);
+    setHash("e3b0c44298fc1c149afbf4c8996fb924...");
     setCaseId(`CF-${Math.floor(Math.random() * 100000)}`);
+    setTags(["BCI_TRIGGERED", "MALWARE", "SUSPICIOUS"]);
+    setReportGenerated(true);
   }, [decision]);
-
-  const downloadPDF = async () => {
-    const element = pdfRef.current;
-    const canvas = await html2canvas(element, { scale: 2 });
-    const imgData = canvas.toDataURL("image/png");
-
-    const pdf = new jsPDF("p", "mm", "a4");
-    const pdfWidth = pdf.internal.pageSize.getWidth();
-    const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
-
-    pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
-    pdf.save(`Forensic_Report_${caseId}.pdf`);
-
-    setStatus("COMPLETED");          // ✅ STATUS UPDATED HERE
-    setReportGenerated(true);        // ✅ SHOW BADGE AFTER DOWNLOAD
-  };
 
   if (!decision) {
     return (
-      <div className="forensic-idle">
-        <h2>No forensic task initiated</h2>
-        <p>Awaiting approved action from CSP.</p>
+      <div className="forensic-empty">
+        <h2>No forensic analysis initiated</h2>
+        <p>Waiting for CSP-approved evidence.</p>
       </div>
     );
   }
 
   return (
-    <div className="forensic-root">
-      <header className="forensic-header">
-        <h1>Forensic Investigation Report</h1>
+    <div className="forensic-page" ref={pdfRef}>
+      {/* HEADER */}
+      <div className="forensic-top">
+        <h1>Digital Forensics Analysis Output</h1>
+      </div>
 
-        {reportGenerated && (   /* ✅ CONDITIONAL RENDER */
-          <span className="report-status completed">
-            Generated Successfully
-          </span>
-        )}
-      </header>
+      {/* MAIN GRID */}
+      <div className="forensic-grid">
+        {/* LEFT PANEL */}
+        <div className="forensic-left">
+          <div className="forensic-card">
+            <h3>Evidence File</h3>
+            <p className="file-name">malware_sample.exe</p>
+            <p className="hash">Hash (SHA-256): {hash}</p>
 
-      <div className="forensic-layout" ref={pdfRef}>
-        <div className="forensic-panel">
-          <h3>Report Status</h3>
-          <p className="verified">✔ Report Generated</p>
-          <p><b>Blockchain Verification:</b> VERIFIED</p>
-          <p><b>Case ID:</b> {caseId}</p>
-          <p><b>Source:</b> BCI → CSP</p>
-        </div>
+            <div className="alert danger">
+              ⚠ MALWARE DETECTED
+            </div>
+          </div>
 
-        <div className="forensic-panel">
-          <h3>Evidence Summary</h3>
-          <p><b>File:</b> malware_sample.exe</p>
-          <p><b>Hash:</b> {hash}</p>
-          <p><b>Action:</b> {decision.action}</p>
-          <p><b>Risk:</b> {decision.risk}</p>
+          <div className="forensic-card">
+            <h3>Evidence Result</h3>
+            <p className="result">Evidence Tagged as Suspicious</p>
 
-          <div className="forensic-actions">
-            <button className="download-btn" onClick={downloadPDF}>
-              Download Report (PDF)
-            </button>
-            <button
-              className="blockchain-btn"
-              onClick={() => navigate("/blockchain")}
-            >
-              View Blockchain Proof
-            </button>
+            <div className="status-indicator">
+              <span className="circle normal" />
+              <span>Normal</span>
+            </div>
           </div>
         </div>
 
-        <div className="forensic-panel logs">
-          <h3>Real-Time Activity Log</h3>
-          <ul>
-            {timeline.map((log, i) => (
-              <li key={i}>{log}</li>
-            ))}
-          </ul>
+        {/* RIGHT PANEL */}
+        <div className="forensic-right">
+          <div className="forensic-card wide">
+            <h3>File Details & Analysis Summary</h3>
+
+            <table className="analysis-table">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Value</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>File Type</td>
+                  <td>Executable</td>
+                  <td>1.2 MB</td>
+                </tr>
+                <tr>
+                  <td>Modified</td>
+                  <td>2023-10-26</td>
+                  <td>Suspicious timestamp</td>
+                </tr>
+                <tr>
+                  <td>IOCs</td>
+                  <td>5 Found</td>
+                  <td>Known malware signatures</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p className="analysis-text">
+              Automated scan identified known malware signatures. Based on
+              BCI-driven commands, the evidence was tagged for isolation and
+              further investigation.
+            </p>
+
+            <div className="forensic-actions">
+              {/* ❌ Download button removed */}
+              <button onClick={() => navigate("/blockchain")}>
+                View Blockchain Proof
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="forensic-panel tags-panel">
+      {/* TIMELINE */}
+      <div className="forensic-card timeline spaced-section">
+        <h3>Real-Time Activity Log</h3>
+        <ul>
+          {timeline.map((t, i) => (
+            <li key={i}>{t}</li>
+          ))}
+        </ul>
+      </div>
+
+      {/* TAGS */}
+      <div className="forensic-card tags spaced-section">
         <h3>Tags & Annotations</h3>
-        <div className="tag-container">
+        <div className="tag-list">
           {tags.map((tag, i) => (
             <span key={i} className="tag">{tag}</span>
           ))}
         </div>
       </div>
+
+      <footer className="forensic-footer">
+        Version 1.0 © Cognitive ForenChain
+      </footer>
     </div>
   );
 }

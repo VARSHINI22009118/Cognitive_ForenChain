@@ -1,0 +1,12 @@
+{
+  "number": 1,
+  "hash": "0xabc123",
+  "tx_hash": "0xdef456",
+  "status": "SUCCESS",
+  "logs": [
+    {"time":"2025-12-30 12:00","property":"File1","action":"TAG","notes":"Important","highlight":true},
+    {"time":"2025-12-30 12:01","property":"EEG Signal","action":"COLLECT","notes":"High attention","highlight":false}
+  ],
+  "systemHealth": "Healthy",
+  "contractStatus": "Verified"
+}
