@@ -1,0 +1,115 @@
+2025-12-28 20:32:00,716 [BCI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-28 20:32:00,716 [BCI] [33mPress CTRL+C to quit[0m
+2025-12-28 20:32:00,719 [BCI]  * Restarting with stat
+2025-12-28 20:32:01,115 [BCI]  * Debugger is active!
+2025-12-28 20:32:01,117 [BCI]  * Debugger PIN: 735-784-309
+2025-12-28 20:32:08,542 [BCI] 127.0.0.1 - - [28/Dec/2025 20:32:08] "OPTIONS /api/login HTTP/1.1" 200 -
+2025-12-28 20:32:09,055 [BCI] 127.0.0.1 - - [28/Dec/2025 20:32:09] "POST /api/login HTTP/1.1" 200 -
+2025-12-28 20:50:29,116 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\routes.py', reloading
+2025-12-28 20:50:29,155 [BCI]  * Restarting with stat
+2025-12-28 21:37:18,233 [BCI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-28 21:37:18,234 [BCI] [33mPress CTRL+C to quit[0m
+2025-12-28 21:37:18,235 [BCI]  * Restarting with stat
+2025-12-28 21:37:18,457 [BCI]  * Debugger is active!
+2025-12-28 21:37:18,459 [BCI]  * Debugger PIN: 735-784-309
+2025-12-28 21:37:26,653 [BCI] 127.0.0.1 - - [28/Dec/2025 21:37:26] "[33mGET /main.d26e7fb23c6410ba309d.hot-update.json HTTP/1.1[0m" 404 -
+2025-12-28 21:37:29,126 [BCI] 127.0.0.1 - - [28/Dec/2025 21:37:29] "OPTIONS /api/login HTTP/1.1" 200 -
+2025-12-28 21:37:29,543 [BCI] 127.0.0.1 - - [28/Dec/2025 21:37:29] "POST /api/login HTTP/1.1" 200 -
+2025-12-28 21:37:35,668 [BCI] 127.0.0.1 - - [28/Dec/2025 21:37:35] "OPTIONS /api/bci-command HTTP/1.1" 200 -
+2025-12-28 21:37:35,983 [BCI] Command: COLLECT_EVIDENCE | Confidence: 0.6 | Timestamp: 2025-12-28T16:07:35.665Z
+2025-12-28 21:37:35,984 [BCI] 127.0.0.1 - - [28/Dec/2025 21:37:35] "POST /api/bci-command HTTP/1.1" 200 -
+2025-12-28 22:21:29,853 [BCI] 127.0.0.1 - - [28/Dec/2025 22:21:29] "OPTIONS /api/bci-command HTTP/1.1" 200 -
+2025-12-28 22:21:30,110 [BCI] Command: MARK_ANOMALY | Confidence: 0.66 | Timestamp: 2025-12-28T16:51:29.533Z
+2025-12-28 22:21:30,111 [BCI] 127.0.0.1 - - [28/Dec/2025 22:21:30] "POST /api/bci-command HTTP/1.1" 200 -
+2025-12-29 01:21:42,798 [BCI] 127.0.0.1 - - [29/Dec/2025 01:21:42] "OPTIONS /api/bci-command HTTP/1.1" 200 -
+2025-12-29 01:21:43,050 [BCI] Command: MARK_ANOMALY | Confidence: 0.62 | Timestamp: 2025-12-28T19:51:42.478Z
+2025-12-29 01:21:43,050 [BCI] 127.0.0.1 - - [29/Dec/2025 01:21:43] "POST /api/bci-command HTTP/1.1" 200 -
+2025-12-29 01:43:56,077 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\csp\\decision_engine.py', reloading
+2025-12-29 01:43:56,157 [BCI]  * Restarting with stat
+2025-12-29 01:43:56,446 [BCI]  * Debugger is active!
+2025-12-29 01:43:56,447 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 01:44:05,498 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\csp\\validators.py', reloading
+2025-12-29 01:44:05,552 [BCI]  * Restarting with stat
+2025-12-29 01:44:05,852 [BCI]  * Debugger is active!
+2025-12-29 01:44:05,853 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 01:44:11,891 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\csp\\logger.py', reloading
+2025-12-29 01:44:11,926 [BCI]  * Restarting with stat
+2025-12-29 01:44:12,195 [BCI]  * Debugger is active!
+2025-12-29 01:44:12,196 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 01:44:43,353 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\routes.py', reloading
+2025-12-29 01:44:43,388 [BCI]  * Restarting with stat
+2025-12-29 01:44:43,728 [BCI]  * Debugger is active!
+2025-12-29 01:44:43,729 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 01:47:36,593 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\routes.py', reloading
+2025-12-29 01:47:36,630 [BCI]  * Restarting with stat
+2025-12-29 01:47:36,939 [BCI]  * Debugger is active!
+2025-12-29 01:47:36,940 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 01:48:24,034 [BCI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-29 01:48:24,034 [BCI] [33mPress CTRL+C to quit[0m
+2025-12-29 01:48:24,036 [BCI]  * Restarting with stat
+2025-12-29 01:48:24,273 [BCI]  * Debugger is active!
+2025-12-29 01:48:24,274 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 01:48:31,503 [BCI] 127.0.0.1 - - [29/Dec/2025 01:48:31] "[33mGET /main.24e01da5db749d889d46.hot-update.json HTTP/1.1[0m" 404 -
+2025-12-29 01:48:31,630 [BCI] 127.0.0.1 - - [29/Dec/2025 01:48:31] "[33mGET /main.24e01da5db749d889d46.hot-update.json HTTP/1.1[0m" 404 -
+2025-12-29 01:48:33,821 [BCI] 127.0.0.1 - - [29/Dec/2025 01:48:33] "OPTIONS /api/login HTTP/1.1" 200 -
+2025-12-29 01:48:34,265 [BCI] 127.0.0.1 - - [29/Dec/2025 01:48:34] "POST /api/login HTTP/1.1" 200 -
+2025-12-29 01:48:42,382 [BCI] 127.0.0.1 - - [29/Dec/2025 01:48:42] "OPTIONS /api/bci-command HTTP/1.1" 200 -
+2025-12-29 01:48:42,691 [BCI] Command: TAG_EVIDENCE | Confidence: 0.6 | Timestamp: 2025-12-28T20:18:42.376Z
+2025-12-29 01:48:42,692 [BCI] 127.0.0.1 - - [29/Dec/2025 01:48:42] "POST /api/bci-command HTTP/1.1" 200 -
+2025-12-29 10:31:37,125 [BCI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-29 10:31:37,125 [BCI] [33mPress CTRL+C to quit[0m
+2025-12-29 10:31:37,127 [BCI]  * Restarting with stat
+2025-12-29 10:31:37,633 [BCI]  * Debugger is active!
+2025-12-29 10:31:37,640 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 10:32:07,217 [BCI] 127.0.0.1 - - [29/Dec/2025 10:32:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-29 10:32:09,449 [BCI] 127.0.0.1 - - [29/Dec/2025 10:32:09] "OPTIONS /api/login HTTP/1.1" 200 -
+2025-12-29 10:32:09,987 [BCI] 127.0.0.1 - - [29/Dec/2025 10:32:09] "POST /api/login HTTP/1.1" 200 -
+2025-12-29 10:32:25,375 [BCI] 127.0.0.1 - - [29/Dec/2025 10:32:25] "OPTIONS /api/bci-command HTTP/1.1" 200 -
+2025-12-29 10:32:25,682 [BCI] Command: TAG_EVIDENCE | Confidence: 0.56 | Timestamp: 2025-12-29T05:02:25.369Z
+2025-12-29 10:32:25,683 [BCI] 127.0.0.1 - - [29/Dec/2025 10:32:25] "POST /api/bci-command HTTP/1.1" 200 -
+2025-12-29 10:53:12,926 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\routes.py', reloading
+2025-12-29 10:53:12,990 [BCI]  * Restarting with stat
+2025-12-29 10:53:13,402 [BCI]  * Debugger is active!
+2025-12-29 10:53:13,403 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 10:53:40,576 [BCI] 127.0.0.1 - - [29/Dec/2025 10:53:40] "OPTIONS /api/bci-command HTTP/1.1" 200 -
+2025-12-29 10:53:40,834 [BCI] Command: COLLECT_EVIDENCE | Confidence: 0.56 | Timestamp: 2025-12-29T05:23:40.257Z
+2025-12-29 10:53:40,835 [BCI] 127.0.0.1 - - [29/Dec/2025 10:53:40] "POST /api/bci-command HTTP/1.1" 200 -
+2025-12-29 10:53:40,885 [BCI] 127.0.0.1 - - [29/Dec/2025 10:53:40] "OPTIONS /api/csp/command HTTP/1.1" 200 -
+2025-12-29 10:53:41,153 [BCI] 127.0.0.1 - - [29/Dec/2025 10:53:41] "POST /api/csp/command HTTP/1.1" 200 -
+2025-12-29 11:21:21,759 [BCI] 127.0.0.1 - - [29/Dec/2025 11:21:21] "OPTIONS /api/bci-command HTTP/1.1" 200 -
+2025-12-29 11:21:22,021 [BCI] Command: MARK_ANOMALY | Confidence: 0.6 | Timestamp: 2025-12-29T05:51:21.445Z
+2025-12-29 11:21:22,022 [BCI] 127.0.0.1 - - [29/Dec/2025 11:21:22] "POST /api/bci-command HTTP/1.1" 200 -
+2025-12-29 11:21:22,076 [BCI] 127.0.0.1 - - [29/Dec/2025 11:21:22] "OPTIONS /api/csp/command HTTP/1.1" 200 -
+2025-12-29 11:21:22,335 [BCI] 127.0.0.1 - - [29/Dec/2025 11:21:22] "POST /api/csp/command HTTP/1.1" 200 -
+2025-12-29 13:01:44,189 [BCI]  * Detected change in 'C:\\Users\\WELCOME\\Downloads\\Cognitive_ForenChain\\backend\\routes.py', reloading
+2025-12-29 13:01:44,239 [BCI]  * Restarting with stat
+2025-12-29 13:03:51,510 [BCI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-29 13:03:51,510 [BCI] [33mPress CTRL+C to quit[0m
+2025-12-29 13:03:51,511 [BCI]  * Restarting with stat
+2025-12-29 13:03:51,811 [BCI]  * Debugger is active!
+2025-12-29 13:03:51,814 [BCI]  * Debugger PIN: 735-784-309
+2025-12-29 13:04:01,003 [BCI] 127.0.0.1 - - [29/Dec/2025 13:04:01] "[33mGET /main.c27063fcc4c84e4cf897.hot-update.json HTTP/1.1[0m" 404 -
+2025-12-29 13:04:02,856 [BCI] 127.0.0.1 - - [29/Dec/2025 13:04:02] "OPTIONS /api/login HTTP/1.1" 200 -
+2025-12-29 13:04:03,277 [BCI] 127.0.0.1 - - [29/Dec/2025 13:04:03] "POST /api/login HTTP/1.1" 200 -
+2025-12-29 13:04:11,330 [BCI] 127.0.0.1 - - [29/Dec/2025 13:04:11] "OPTIONS /api/bci-command HTTP/1.1" 200 -
+2025-12-29 13:04:11,639 [BCI] Command: MARK_ANOMALY | Confidence: 0.62 | Timestamp: 2025-12-29T07:34:11.325Z
+2025-12-29 13:04:11,640 [BCI] 127.0.0.1 - - [29/Dec/2025 13:04:11] "POST /api/bci-command HTTP/1.1" 200 -
+2025-12-29 13:04:11,899 [BCI] 127.0.0.1 - - [29/Dec/2025 13:04:11] "OPTIONS /api/csp/command HTTP/1.1" 200 -
+2025-12-29 13:04:11,965 [BCI] 127.0.0.1 - - [29/Dec/2025 13:04:11] "POST /api/csp/command HTTP/1.1" 200 -
+2025-12-29 13:15:36,183 [BCI] 127.0.0.1 - - [29/Dec/2025 13:15:36] "OPTIONS /api/login HTTP/1.1" 200 -
+2025-12-29 13:15:36,605 [BCI] 127.0.0.1 - - [29/Dec/2025 13:15:36] "POST /api/login HTTP/1.1" 200 -
+2025-12-29 13:16:02,199 [BCI] 127.0.0.1 - - [29/Dec/2025 13:16:02] "OPTIONS /api/bci-command HTTP/1.1" 200 -
+2025-12-29 13:16:02,510 [BCI] Command: TAG_EVIDENCE | Confidence: 0.64 | Timestamp: 2025-12-29T07:46:02.194Z
+2025-12-29 13:16:02,510 [BCI] 127.0.0.1 - - [29/Dec/2025 13:16:02] "POST /api/bci-command HTTP/1.1" 200 -
+2025-12-29 13:16:02,771 [BCI] 127.0.0.1 - - [29/Dec/2025 13:16:02] "OPTIONS /api/csp/command HTTP/1.1" 200 -
+2025-12-29 13:16:02,825 [BCI] 127.0.0.1 - - [29/Dec/2025 13:16:02] "POST /api/csp/command HTTP/1.1" 200 -
+2025-12-29 13:40:12,100 [BCI] 127.0.0.1 - - [29/Dec/2025 13:40:12] "OPTIONS /api/bci-command HTTP/1.1" 200 -
+2025-12-29 13:40:12,369 [BCI] Command: MARK_ANOMALY | Confidence: 0.55 | Timestamp: 2025-12-29T08:10:11.786Z
+2025-12-29 13:40:12,370 [BCI] 127.0.0.1 - - [29/Dec/2025 13:40:12] "POST /api/bci-command HTTP/1.1" 200 -
+2025-12-29 13:40:12,407 [BCI] 127.0.0.1 - - [29/Dec/2025 13:40:12] "OPTIONS /api/csp/command HTTP/1.1" 200 -
+2025-12-29 13:40:12,692 [BCI] 127.0.0.1 - - [29/Dec/2025 13:40:12] "POST /api/csp/command HTTP/1.1" 200 -

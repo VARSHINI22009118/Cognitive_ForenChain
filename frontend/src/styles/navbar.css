@@ -1,0 +1,15 @@
+.navbar {
+  height: 60px;
+  background: #020617;
+  color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.profile-icon {
+  cursor: pointer;
+  font-size: 20px;
+}

@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  background: #020617;
+  color: #e5e7eb;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.dashboard-root {
+  height: 100vh;
+}
+
+/* TOP BAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #020617;
+  border-bottom: 1px solid #1e293b;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-links span {
+  margin: 0 12px;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+.nav-links .active {
+  color: #38bdf8;
+}
+
+.profile {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* GRID */
+.dashboard-grid {
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* MODULES */
+.module-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.module {
+  padding: 14px;
+  border-radius: 10px;
+  background: #0f172a;
+}
+
+.module span {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.active span {
+  color: #22c55e;
+}
+
+.connected span {
+  color: #facc15;
+}
+
+/* REAL-TIME LOG */
+.log-container {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 12px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.log {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: #020617;
+  line-height: 1.8;
+}
+
+/* PROGRESS */
+.progress {
+  height: 8px;
+  background: #1e293b;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #22c55e);
+}
+
+.percent {
+  margin-top: 8px;
+  display: inline-block;
+}
+
+/* SYSTEM HEALTH */
+.system-health {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.health-ring {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 6px solid #22c55e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+}
+
+.health-inner {
+  font-size: 30px;
+  color: #22c55e;
+}
+
+.health-text {
+  font-size: 14px;
+  color: #94a3b8;
+}

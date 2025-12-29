@@ -1,0 +1,2 @@
+This is a test forensic evidence file.
+Used for Cognitive Foren Chain backend testing.

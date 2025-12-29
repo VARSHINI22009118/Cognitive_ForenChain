@@ -1,0 +1,3 @@
+{"command": "MARK_ANOMALY", "confidence": 0.62, "decision": {"action": "NO_ACTION", "risk": "NONE", "message": "Confidence too low \u2013 no action taken"}, "timestamp": "2025-12-29T07:34:11.325Z", "logged_at": "2025-12-29T07:34:11.962302"}
+{"command": "TAG_EVIDENCE", "confidence": 0.64, "decision": {"action": "TAG", "risk": "LOW", "message": "Evidence tagging approved"}, "timestamp": "2025-12-29T07:46:02.194Z", "logged_at": "2025-12-29T07:46:02.822398"}
+{"command": "MARK_ANOMALY", "confidence": 0.55, "decision": {"action": "NO_ACTION", "risk": "NONE", "message": "Confidence too low \u2013 no action taken"}, "timestamp": "2025-12-29T08:10:11.786Z", "logged_at": "2025-12-29T08:10:12.680015"}

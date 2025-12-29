@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS analysts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(255) NOT NULL,
+    username VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    role VARCHAR(50) DEFAULT 'Analyst',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

@@ -1,0 +1,19 @@
+body {
+  font-family: Arial;
+}
+
+.navbar {
+  background: #222;
+  color: white;
+  padding: 10px;
+}
+
+.sidebar {
+  width: 200px;
+  float: left;
+}
+
+.dashboard {
+  margin-left: 210px;
+  padding: 20px;
+}

@@ -1,0 +1,4 @@
+ROLES = {
+    "ANALYST": ["TAG_SUSPICIOUS", "MARK_SAFE", "FREEZE_EVIDENCE"],
+    "ADMIN": ["ALL"]
+}

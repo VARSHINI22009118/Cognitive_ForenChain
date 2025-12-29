@@ -1,0 +1,2 @@
+{"logged_at": "2025-12-29T05:23:41.148035", "command": "COLLECT_EVIDENCE", "confidence": 0.56, "decision": {"action": "NO_ACTION", "risk": "NONE", "message": "Confidence too low \u2013 no action taken"}, "timestamp": "2025-12-29T05:23:40.257Z"}
+{"logged_at": "2025-12-29T05:51:22.333295", "command": "MARK_ANOMALY", "confidence": 0.6, "decision": {"action": "NO_ACTION", "risk": "NONE", "message": "Confidence too low \u2013 no action taken"}, "timestamp": "2025-12-29T05:51:21.445Z"}
