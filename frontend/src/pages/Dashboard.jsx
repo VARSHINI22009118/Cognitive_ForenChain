@@ -15,7 +15,7 @@ export default function Dashboard() {
             Dashboard
           </span>
           <span onClick={() => navigate("/analysis")}>Analysis</span>
-          <span onClick={() => navigate("/reports")}>Reports</span>
+          <span onClick={() => navigate("/report")}>Reports</span> {/* Fixed link */}
         </nav>
 
         <div
@@ -30,61 +30,76 @@ export default function Dashboard() {
       {/* MAIN GRID */}
       <div className="dashboard-grid">
         {/* MODULE STATUS */}
-        <div className="card">
+        <div className="card hover-card">
           <h3>Module Status</h3>
+
           <div className="module-grid">
             <div
-              className="module active"
+              className="module hover-module"
               onClick={() => navigate("/bci")}
-              style={{ cursor: "pointer" }}
             >
-              BCI Module
-              <span>ACTIVE ✅</span>
+              <div className="module-box active">
+                <span className="module-name">BCI Module</span>
+                <span className="module-state">ACTIVE ✅</span>
+              </div>
             </div>
 
             <div
-              className="module active"
+              className="module hover-module"
               onClick={() => navigate("/cyber-security")}
-              style={{ cursor: "pointer" }}
             >
-              Cyber Security Platform
-              <span>ACTIVE ✅</span>
+              <div className="module-box active">
+                <span className="module-name">
+                  Cyber Security Platform
+                </span>
+                <span className="module-state">ACTIVE ✅</span>
+              </div>
             </div>
 
             <div
-              className="module connected"
+              className="module hover-module"
               onClick={() => navigate("/forensics")}
-              style={{ cursor: "pointer" }}
             >
-              Digital Forensics Module
-              <span>CONNECTED ⏱️</span>
+              <div className="module-box connected">
+                <span className="module-name">
+                  Digital Forensics Module
+                </span>
+                <span className="module-state">CONNECTED ⏱️</span>
+              </div>
             </div>
 
-            {/* CONNECTION MODULE — intentionally left untouched */}
-            <div className="module connected">
-              Connection
-              <span>IDLE ⏱ </span>
+            <div className="module hover-module">
+              <div className="module-box connected">
+                <span className="module-name">Connection</span>
+                <span className="module-state">IDLE ⏳</span>
+              </div>
             </div>
           </div>
         </div>
 
         {/* REAL-TIME LOG */}
-        <div className="card">
+        <div className="card hover-card">
           <h3>Real-Time Activity Log</h3>
 
           <div className="log-container">
-            <ul className="log">
-              <li>[14:35:01] BCI: “TAG EVIDENCE” issued</li>
-              <li>[14:35:02] CSP: Executing DFM</li>
-              <li>[14:30:03] DFM: File hash acquired</li>
-              <li>[10:18:04] BLOCKCHAIN: Transaction recorded</li>
-            </ul>
+            <div className="log-item">
+              [14:35:01] BCI: “TAG EVIDENCE” issued
+            </div>
+            <div className="log-item">
+              [14:35:02] CSP: Executing DFM
+            </div>
+            <div className="log-item">
+              [14:30:03] DFM: File hash acquired
+            </div>
+            <div className="log-item">
+              [10:18:04] BLOCKCHAIN: Transaction recorded
+            </div>
           </div>
         </div>
 
         {/* BLOCKCHAIN STATUS */}
         <div
-          className="card"
+          className="card hover-card"
           onClick={() => navigate("/blockchain")}
           style={{ cursor: "pointer" }}
         >
@@ -99,7 +114,7 @@ export default function Dashboard() {
         </div>
 
         {/* SYSTEM HEALTH */}
-        <div className="card system-health">
+        <div className="card system-health hover-card">
           <h3>System Health</h3>
 
           <div className="health-ring">

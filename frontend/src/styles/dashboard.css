@@ -6,10 +6,10 @@ body {
 }
 
 .dashboard-root {
-  height: 100vh;
+  min-height: 100vh;
 }
 
-/* TOP BAR */
+/* ================= TOP BAR ================= */
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -28,6 +28,11 @@ body {
   margin: 0 12px;
   color: #94a3b8;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links span:hover {
+  color: #38bdf8;
 }
 
 .nav-links .active {
@@ -39,73 +44,109 @@ body {
   cursor: pointer;
 }
 
-/* GRID */
+/* ================= GRID ================= */
 .dashboard-grid {
-  padding: 25px;
+  padding: 26px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 22px;
 }
 
-/* CARD */
+/* ================= CARD ================= */
 .card {
-  background: #020617;
+  background: linear-gradient(180deg, #020617, #020617);
   border: 1px solid #1e293b;
-  border-radius: 14px;
-  padding: 20px;
+  border-radius: 16px;
+  padding: 24px;
+  box-sizing: border-box;
 }
 
 .card h3 {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   font-size: 16px;
 }
 
-/* MODULES */
+/* ================= MODULE GRID ================= */
 .module-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 18px;
+  padding: 10px;              /* ✅ equal space from card edges */
+  box-sizing: border-box;
 }
 
+/* ================= MODULE ================= */
 .module {
-  padding: 14px;
-  border-radius: 10px;
-  background: #0f172a;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-.module span {
+.module:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= MODULE BOX ================= */
+.module-box {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: linear-gradient(
+    145deg,
+    #121c34,
+    #16223f
+  );
+  box-sizing: border-box;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* subtle hover highlight */
+.module:hover .module-box {
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.18);
+}
+
+.module-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.module-state {
   display: block;
   margin-top: 6px;
   font-size: 13px;
 }
 
-.active span {
+/* STATUS COLORS */
+.active .module-state {
   color: #22c55e;
 }
 
-.connected span {
+.connected .module-state {
   color: #facc15;
 }
 
-/* REAL-TIME LOG */
+/* ================= REAL-TIME LOG ================= */
 .log-container {
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 12px;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 14px;
   max-height: 180px;
   overflow-y: auto;
 }
 
-.log {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
+.log-item {
+  background: #f1f5f9;
   color: #020617;
-  line-height: 1.8;
+  padding: 9px 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border-left: 4px solid #38bdf8;
 }
 
-/* PROGRESS */
+/* ================= PROGRESS ================= */
 .progress {
   height: 8px;
   background: #1e293b;
@@ -119,11 +160,11 @@ body {
 }
 
 .percent {
-  margin-top: 8px;
+  margin-top: 10px;
   display: inline-block;
 }
 
-/* SYSTEM HEALTH */
+/* ================= SYSTEM HEALTH ================= */
 .system-health {
   display: flex;
   flex-direction: column;
@@ -139,8 +180,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px 0;
-  box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+  margin: 12px 0;
+  box-shadow: 0 0 24px rgba(34, 197, 94, 0.45);
 }
 
 .health-inner {

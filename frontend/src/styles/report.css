@@ -1,0 +1,125 @@
+.report-root {
+  background: #162955;
+  min-height: 100vh;
+  padding: 30px;
+  color: #e5e7eb;
+}
+
+/* ================= HEADER ================= */
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.report-status {
+  background: #065f46;
+  color: #d1fae5;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* ================= MAIN GRID ================= */
+.report-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.3fr 1fr;
+  gap: 20px;
+}
+
+/* ================= PANELS ================= */
+.report-panel {
+  background: rgba(2, 6, 23, 0.95);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.report-panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+
+.report-panel h3 {
+  color: #38bdf8;
+  margin-bottom: 12px;
+}
+
+/* ================= LOGS ================= */
+.logs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logs li {
+  background: #020617;
+  padding: 8px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+}
+
+/* ================= STATUS ================= */
+.verified {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.report-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.download-btn {
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.blockchain-btn {
+  background: #334155;
+  color: #e5e7eb;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.download-btn:hover,
+.blockchain-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+.download-btn:active,
+.blockchain-btn:active {
+  transform: scale(0.97);
+}
+
+/* ================= TAGS ================= */
+.tags-panel {
+  margin-top: 20px;
+}
+
+.tag-container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #1e293b;
+  padding: 6px 10px;
+  border-radius: 5px;
+}

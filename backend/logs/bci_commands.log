@@ -538,3 +538,8 @@
 2025-12-30 01:12:59,371 [BCI] 127.0.0.1 - - [30/Dec/2025 01:12:59] "POST /api/bci-command HTTP/1.1" 200 -
 2025-12-30 01:12:59,631 [BCI] 127.0.0.1 - - [30/Dec/2025 01:12:59] "OPTIONS /api/csp/command HTTP/1.1" 200 -
 2025-12-30 01:12:59,697 [BCI] 127.0.0.1 - - [30/Dec/2025 01:12:59] "POST /api/csp/command HTTP/1.1" 200 -
+2025-12-30 01:21:04,947 [BCI] 127.0.0.1 - - [30/Dec/2025 01:21:04] "OPTIONS /api/bci-command HTTP/1.1" 200 -
+2025-12-30 01:21:05,199 [BCI] Command: TAG_EVIDENCE | Confidence: 0.57 | Timestamp: 2025-12-29T19:51:04.623Z
+2025-12-30 01:21:05,200 [BCI] 127.0.0.1 - - [30/Dec/2025 01:21:05] "POST /api/bci-command HTTP/1.1" 200 -
+2025-12-30 01:21:05,269 [BCI] 127.0.0.1 - - [30/Dec/2025 01:21:05] "OPTIONS /api/csp/command HTTP/1.1" 200 -
+2025-12-30 01:21:05,516 [BCI] 127.0.0.1 - - [30/Dec/2025 01:21:05] "POST /api/csp/command HTTP/1.1" 200 -

@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; // ✅ import navigate
 import "../styles/blockchain.css";
 import { generateSampleBlockchainLogs } from "../services/sampleBlockchainLogs";
 
-/* ================= UI HELPERS ================= */
 const shortHash = (hash, start = 8, end = 6) => {
   if (!hash || hash.length <= start + end) return hash;
   return `${hash.slice(0, start)}…${hash.slice(-end)}`;
 };
 
-// Dynamic time generator (login-time based)
 const dynamicTime = (offsetSeconds = 0) => {
   const d = new Date();
   d.setSeconds(d.getSeconds() + offsetSeconds);
@@ -19,13 +18,13 @@ export default function BlockchainModule() {
   const [logs, setLogs] = useState([]);
   const [tx, setTx] = useState(null);
 
+  const navigate = useNavigate(); // ✅ useNavigate hook
+
   useEffect(() => {
-    // 🔹 Generate sample blockchain blocks (frontend-only)
     const sampleBlocks = generateSampleBlockchainLogs();
 
     let counter = 0;
 
-    // 🔹 Take any 5 blocks and flatten logs
     const generatedLogs = sampleBlocks
       .slice(0, 5)
       .flatMap((block) =>
@@ -37,7 +36,6 @@ export default function BlockchainModule() {
 
     setLogs(generatedLogs);
 
-    // 🔹 Fake transaction metadata (UI only)
     setTx({
       status: "SUCCESS",
       blockNumber: Math.floor(Math.random() * 9000) + 1000,
@@ -64,9 +62,9 @@ export default function BlockchainModule() {
       <header className="bc-header">
         <h1>Cognitive ForenChain & Smart Contract Log</h1>
         <nav>
-          <span>Dashboard</span>
-          <span>Analysis</span>
-          <span>Reports</span>
+          <span onClick={() => navigate("/dashboard")}>Dashboard</span>
+          <span onClick={() => navigate("/analysis")}>Analysis</span>
+          <span onClick={() => navigate("/report")}>Reports</span> {/* ✅ updated */}
           <span>Settings</span>
         </nav>
       </header>
@@ -116,9 +114,7 @@ export default function BlockchainModule() {
                     <td>{log.time}</td>
                     <td>{log.property}</td>
                     <td>{log.action}</td>
-                    <td className={log.highlight ? "ok" : ""}>
-                      {log.notes}
-                    </td>
+                    <td className={log.highlight ? "ok" : ""}>{log.notes}</td>
                   </tr>
                 ))}
               </tbody>

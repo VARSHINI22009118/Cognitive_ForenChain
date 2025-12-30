@@ -1,14 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+/* Core Pages */
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import UploadEvidence from "./pages/UploadEvidence";
 import BlockchainLogs from "./pages/BlockchainLogs";
 import AnalystProfile from "./pages/AnalystProfile";
-
-/* Placeholder pages */
-const Analysis = () => <div>Analysis Page</div>;
-const Reports = () => <div>Reports Page</div>;
+import Analysis from "./pages/Analysis";
+import Reports from "./pages/Report.jsx"; // ✅ correct import
 
 /* Module Pages */
 import BCIModule from "./pages/BCIModule";
@@ -30,7 +29,7 @@ function App() {
         <Route path="/logs" element={<BlockchainLogs />} />
         <Route path="/profile" element={<AnalystProfile />} />
         <Route path="/analysis" element={<Analysis />} />
-        <Route path="/reports" element={<Reports />} />
+        <Route path="/reports" element={<Reports />} />  {/* ✅ use Reports */}
 
         {/* MODULE ROUTES */}
         <Route path="/bci" element={<BCIModule />} />

@@ -18,6 +18,12 @@
   background: #0f172a;
   padding: 15px;
   border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 /* EEG GRAPH */
@@ -26,6 +32,11 @@
   height: 160px;
   background: #020617;
   border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.eeg-wave:hover {
+  transform: scale(1.02);
 }
 
 /* AXES */
@@ -54,6 +65,12 @@
   border: 1px solid #38bdf8;
   border-radius: 8px;
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.final-command-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 .final-command-box .label {
@@ -67,6 +84,11 @@
   font-weight: bold;
   color: #38bdf8;
   margin-top: 6px;
+  transition: transform 0.2s ease;
+}
+
+.command-value:hover {
+  transform: scale(1.05);
 }
 
 /* CONFIDENCE */
@@ -97,6 +119,13 @@
   padding: 8px 14px;
   border-radius: 6px;
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.emit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  background: #16a34a;
 }
 
 .emit-btn:disabled {
@@ -110,4 +139,14 @@
   padding: 0;
   font-size: 13px;
   line-height: 1.6;
+}
+
+/* Make each log item hover slightly */
+.bci-log li {
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.bci-log li:hover {
+  transform: translateX(4px);
+  color: #38bdf8;
 }

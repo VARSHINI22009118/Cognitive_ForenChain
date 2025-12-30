@@ -1,0 +1,111 @@
+/* ================= ROOT ================= */
+.analysis-root {
+  padding: 40px;
+  color: #e6edf3;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0b1220, #020617);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ================= TITLE ================= */
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ================= MODULE ROW ================= */
+.modules-row {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ================= MODULE CARD ================= */
+.module-card {
+  background: #0f172a;
+  border-radius: 14px;
+  padding: 20px;
+  flex: 1 1 45%; /* 2 per row */
+  box-shadow: inset 0 0 0 1px #1e293b;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: left;
+}
+
+.module-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15), inset 0 0 0 1px #38bdf8;
+}
+
+.module-card h2 {
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.module-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+
+/* ================= UPLOAD SECTION ================= */
+.upload-section {
+  margin-top: 30px;
+  text-align: center;
+  background: #0f172a;
+  border-radius: 14px;
+  padding: 25px 20px;
+  box-shadow: inset 0 0 0 1px #1e293b;
+  width: 100%;
+  max-width: 600px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.upload-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.15), inset 0 0 0 1px #38bdf8;
+}
+
+.upload-section h2 {
+  margin-bottom: 15px;
+  color: #38bdf8;
+}
+
+.upload-section input[type="file"] {
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: #020617;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.upload-section input[type="file"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(56, 189, 248, 0.35);
+}
+
+.upload-section p {
+  margin-top: 12px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1000px) {
+  .module-card {
+    flex: 1 1 100%; /* stack modules on smaller screens */
+  }
+
+  .modules-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
